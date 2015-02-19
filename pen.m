@@ -122,7 +122,3 @@ global fig
 function clearplot (hObject,eventdata) 
 global h_axes
 cla(h_axes);
-      
-
-
-
