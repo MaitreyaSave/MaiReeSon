@@ -30,7 +30,9 @@ for i=1:length(areas)
     [x,y]=size(subImage);
     if((x*y)>50)
         j=j+1;
+        subImage=imresize(subImage,0.3);
         imwrite(subImage,strcat('C:\Users\Maitreya\project\char',num2str(j),'.png'));
+        
     end
 end
 
