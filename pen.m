@@ -114,7 +114,7 @@ end
 
 function cap (hObject,eventdata)    
 global fig
-    screencapture(gcf,[150,80,1070,201],'C:\Users\Maitreya\project\image.png');  
+    screencapture(gcf,[150,77,1070,228],'C:\Users\Maitreya\project\image.png');  
     mH=msgbox('Captured');   
     uiwait(mH);
     close (fig);            
@@ -122,3 +122,7 @@ global fig
 function clearplot (hObject,eventdata) 
 global h_axes
 cla(h_axes);
+      
+
+
+

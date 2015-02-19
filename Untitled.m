@@ -1,5 +1,5 @@
 %converting to gray scale
-in = imread('F:\image.png');
+in = imread('image.png');
 bw=rgb2gray(in);
 
 %noise removal using median filter
@@ -23,14 +23,14 @@ simg=imfill(B,'holes');
 [bw_labelled num]=bwlabel(simg);
 
 j=0;
+areas= regionprops(bw_labelled, 'BoundingBox');
 for i=1:length(areas)
-    areas= regionprops(bw_labelled, 'BoundingBox');
+    
     subImage = imcrop(simg, areas(i).BoundingBox);
     [x,y]=size(subImage);
-    disp(size(subImage));
     if((x*y)>50)
         j=j+1;
-        imwrite(subImage,strcat('char',num2str(j),'.png'));
+        imwrite(subImage,strcat('C:\Users\Maitreya\project\char',num2str(j),'.png'));
     end
 end
 
